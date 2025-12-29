@@ -1,0 +1,119 @@
+Below are the **clear, correct, and current steps to create and use a Gemini API key**, written so you can directly follow them for your project.
+
+---
+
+## 🔑 Gemini API Creation Steps (Google Generative AI)
+
+### 1️⃣ Sign in to Google AI Studio
+
+* Go to **[https://aistudio.google.com](https://aistudio.google.com)**
+* Sign in with your Google account
+
+---
+
+### 2️⃣ Create or Select a Project
+
+* If prompted, select an existing Google Cloud project
+  **or**
+* Create a new project when asked
+
+> This project will own your Gemini API key.
+
+---
+
+### 3️⃣ Generate an API Key
+
+1. In Google AI Studio, click **“Get API key”**
+2. Select **“Create API key”**
+3. Choose the project you want to associate it with
+4. Copy the generated API key
+
+⚠️ **Important:** Treat this key like a password. Do not commit it to GitHub.
+
+---
+
+### 4️⃣ Add the API Key to Your Project
+
+Create a `.env` file in your project root:
+
+```env
+GEMINI_API=your_api_key_here
+```
+
+Your application already loads this using:
+
+```python
+from dotenv import load_dotenv
+load_dotenv()
+```
+
+And configures Gemini with:
+
+```python
+genai.configure(api_key=os.getenv("GEMINI_API"))
+```
+
+---
+
+### 5️⃣ Enable Required APIs (If Prompted)
+
+In some cases, Google may redirect you to Google Cloud Console:
+
+* Enable **Generative Language API**
+* Accept usage terms
+
+---
+
+### 6️⃣ Verify the API Key Works
+
+Run your app:
+
+```bash
+streamlit run app.py
+```
+
+If configured correctly:
+
+* No authentication errors will appear
+* Entity extraction will work normally
+
+---
+
+## 🔒 Best Practices
+
+* ✅ Always use `.env` files
+* ❌ Never hard-code API keys
+* ❌ Never commit `.env` to GitHub
+* ✅ Use `.env.example` for sharing config structure
+
+Example `.env.example`:
+
+```env
+GEMINI_API=your_api_key_here
+```
+
+---
+
+## 🧪 Common Errors & Fixes
+
+| Error                   | Cause             | Fix                     |
+| ----------------------- | ----------------- | ----------------------- |
+| `401 Unauthorized`      | Invalid key       | Regenerate API key      |
+| `429 Too Many Requests` | Rate limit        | Wait or reduce requests |
+| `API key not found`     | `.env` not loaded | Check file location     |
+
+---
+
+
+Get started with Gemini: 
+
+from google import genai
+
+client = genai.Client()
+
+response = client.models.generate_content(
+    model="gemini-3-pro-preview",
+    contents="Explain how AI works in a few words",
+)
+
+print(response.text)
