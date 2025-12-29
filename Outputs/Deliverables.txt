@@ -1,0 +1,21 @@
+#Deliverables
+
+The following deliverables will be provided upon successful completion of the AI-Powered Healthcare Knowledge Graph Explorer project:
+1.AI-Powered Healthcare Knowledge Graph Explorer Application
+A fully functional web-based application enabling healthcare entity extraction, knowledge graph generation, and interactive exploration.
+2.Source Code Package
+Complete and well-structured Python source code (project.py) with modular implementation and in-line documentation.
+3.Database Schema and Data Storage
+SQLite database schema and populated data representing extracted healthcare entities and relationships.
+4.Software Requirements Specification (SRS) Document
+A complete and approved SRS document detailing system requirements, interfaces, features, and constraints.
+5.Functional Specification Document
+Detailed description of system workflows, use cases, and feature-level behavior.
+6.User Manual
+Documentation explaining system usage, features, and navigation for end users.
+7.Installation and Deployment Guide
+Step-by-step instructions for system setup, configuration, and deployment.
+8.Test Results and Validation Report
+Documentation covering system testing, validation outcomes, and acceptance criteria verification.
+9.Exported Sample Reports
+Sample CSV exports demonstrating extracted entities and relationships.
