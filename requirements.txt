@@ -1,0 +1,12 @@
+streamlit
+google-generativeai
+python-dotenv
+pandas
+numpy
+requests
+beautifulsoup4
+networkx
+pyvis
+plotly
+matplotlib
+pillow
