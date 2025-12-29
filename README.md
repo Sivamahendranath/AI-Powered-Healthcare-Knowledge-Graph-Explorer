@@ -67,7 +67,7 @@ All functionality in this repository directly reflects the provided source file.
 
 ```text
 .
-├── app.py                # Main Streamlit application
+├── project.py                # Main Streamlit application
 ├── entities.db           # SQLite database (generated at runtime)
 ├── requirements.txt      # Python dependencies
 ├── .env.example          # Environment variable template
@@ -85,8 +85,8 @@ All functionality in this repository directly reflects the provided source file.
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/Sivamahendranath/AI-Powered-Healthcare-Knowledge-Graph-Explorer
+cd Sivamahendranath/AI-Powered-Healthcare-Knowledge-Graph-Explorer
 ```
 
 ### 2️⃣ Install Dependencies
@@ -108,7 +108,7 @@ GEMINI_API=your_gemini_api_key
 ## ▶️ Running the Application
 
 ```bash
-streamlit run app.py
+streamlit run Project.py
 ```
 
 The application will launch in your browser.
